@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+.navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(36, 110, 248);
+    color: #fff;
+    z-index: 9;
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    text-align: center;
+}
+
 @media screen and (min-width: 1024px) {
     .carousel-item img {
         height: 550px;
