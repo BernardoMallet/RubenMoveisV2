@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Módulo 13 - Bootstrap Avançado</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center mb-5 mt-5">
+        <div id="carousel-exemplo" class="carousel slide carousel-fade w-100" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="2000" class="carousel-item h-25 active">
+                    <img class="d-block w-100" src="./images/Gondolas para centro de lojas.jpeg" />
+                    <div class="carousel-caption">
+                        Gondolas para centro de lojas
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item h-25" >
+                    <img class="d-block w-100" src="./images/Balcões para lojas.jpeg" />
+                    <div class="carousel-caption">
+                        Balcões para lojas
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item h-25" >
+                    <img class="d-block w-100" src="./images/Bancadas sob medida.jpg" />
+                    <div class="carousel-caption">
+                        Bancadas sob medida
+                    </div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" class="active" data-bs-target="#carousel-exemplo" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-cards">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-3">
+                    <img src="./images/Bancas promocionais.jpg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Bancas promocionais
+                            </h4>
+                            <p class="card-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dolorum, modi exercitationem fugit tenetur provident suscipit ducimus eligendi doloribus soluta saepe at pariatur cupiditate magnam, magni libero autem doloremque aut?
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-3">
+                    <img src="./images/gif ruben moveis.gif" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Projetamos o você pede
+                            </h4>
+                            <p class="card-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dolorum, modi exercitationem fugit tenetur provident suscipit ducimus eligendi doloribus soluta saepe at pariatur cupiditate magnam, magni libero autem doloremque aut?
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card mb-3">
+                    <img src="./images/obra pronta.JPG" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Sua ideia vira realidade!
+                            </h4>
+                            <p class="card-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dolorum, modi exercitationem fugit tenetur provident suscipit ducimus eligendi doloribus soluta saepe at pariatur cupiditate magnam, magni libero autem doloremque aut?
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
