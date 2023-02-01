@@ -4,32 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
     <title>Módulo 13 - Bootstrap Avançado</title>
 </head>
 <body>
-    <header id="header">
+    <header id="cabecalho">
         <div class="navbar navbar-expand-lg">
             <div class="container">
-                <h1>Ruben Móveis</h1>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <h1 class="fw-bold">Ruben Móveis</h1>
+                <button type="button" class="navbar-toggler mb-2" data-bs-toggle="collapse" data-bs-target="#menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             <nav class="collapse navbar-collapse justify-content-end" id="menu">
                 <ul class="nav navbar-nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#inicio">Início</a>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link active" href="#inicio">
+                            <i class="bi bi-house-door me-1"></i>
+                            Início
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobreNos">Sobre nós</a>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#sobreNos">
+                            <i class="bi bi-person-check me-1"></i>
+                            Sobre nós
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfólio</a>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#portfolio">
+                            <i class="bi bi-card-text me-1"></i>
+                            Portfólio
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#contato">
+                            <i class="bi bi-chat-left-text me-1"></i>
+                            Contato
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -80,22 +95,23 @@
     <section id="sobreNos">
     <div class="container container-cards">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card mb-3">
-                    <img src="./images/Bancas promocionais.jpg" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Bancas promocionais
-                            </h4>
-                            <p class="card-text">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa dolorum, modi exercitationem fugit tenetur provident suscipit ducimus eligendi doloribus soluta saepe at pariatur cupiditate magnam, magni libero autem doloremque aut?
-                            </p>
-                        </div>
+            <div class="sectionSobreNos d-flex align-items-center w-100 col-lg-12">
+                <img class="rounded-circle m-4" id="avatar" src="./images/1517365956931.jpg" alt="" />
+                <div class="sobreNosDescricao d-flex flex-column align-items-start">
+                    <h4 class="sobreNosTitulo">
+                        Sobre a Ruben Móveis
+                    </h4>
+                    <p class="sobreNosDescricao">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum dolores, obcaecati tempora dicta natus ipsum dolor provident magni voluptatem exercitationem, quos quod accusamus, nesciunt harum sunt aperiam numquam aliquam.
+                    </p>
+                    <p class="sobreNosDescricao">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum dolores, obcaecati tempora dicta natus ipsum dolor provident magni voluptatem exercitationem, quos quod accusamus, nesciunt harum sunt aperiam numquam aliquam.
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="card mb-3">
-                    <img src="./images/gif ruben moveis.gif" alt="">
+                        <img src="./images/gif ruben moveis.gif" alt="">
                         <div class="card-body">
                             <h4 class="card-title">
                                 Projetamos o você pede
@@ -106,9 +122,9 @@
                         </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="card mb-3">
-                    <img src="./images/obra pronta.JPG" alt="">
+                        <img src="./images/obra pronta.JPG" alt="">
                         <div class="card-body">
                             <h4 class="card-title">
                                 Sua ideia vira realidade!
@@ -123,34 +139,292 @@
     </div>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="pt-5 pb-5">
         <div class="container">
-            <nav class="nav nav-tabs">
-                <button data-bs-toggle="tab" data-bs-target="#pro1" class="nav-link active" type="button">Produto 1</button>
-                <button data-bs-toggle="tab" data-bs-target="#pro2" class="nav-link" type="button">Produto 2</button>
-                <button data-bs-toggle="tab" data-bs-target="#pro3" class="nav-link" type="button">Produto 3</button>
-                <button data-bs-toggle="tab" data-bs-target="#pro4" class="nav-link" type="button">Produto 4</button>
-                <button data-bs-toggle="tab" data-bs-target="#pro5" class="nav-link" type="button">Produto 5</button>
-                <button data-bs-toggle="tab" data-bs-target="#pro6" class="nav-link" type="button">Produto 6</button>
-            </nav>
-            <div class="tab-content">
-                <div id="pro1" class="tab-pane active">
-                    Conteúdo do produto 1
+            <div class="row">
+                <h2 class="text-center pb-3">Portfólio</h2>
+            </div>
+            <div class="row">
+                <aside class="col-md-2">
+                    <nav class="nav nav-pills flex-column nav-portofolio">
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#estantes" class="fw-bold text-start nav-link active">Estantes</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#gondolas" class="fw-bold text-start nav-link">Gondolas</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#balcoes" class="fw-bold text-start nav-link">Balcões</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#vitrines" class="fw-bold text-start nav-link">Vitrines</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#armarios" class="fw-bold text-start nav-link">Armarios</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#expositores" class="fw-bold text-start nav-link">Expositores</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#especiais" class="fw-bold text-start nav-link">Especiais</button>
+                    </nav>
+                </aside>
+                <div class="col-md-10">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="estantes">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes de aço.JPG" />
+                                    <h5 class="fw-bold">Estantes de aço</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes em metalon e madeira.jpg" />
+                                    <h5 class="fw-bold">Estantes em metalon e madeira</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes mini porta pallet.jpg" />
+                                    <h5 class="fw-bold">Estantes mini porta pallet</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/obra pronta.JPG" />
+                                    <h5 class="fw-bold">Estantes para estoque</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="gondolas">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas gancheiras.jpg" />
+                                    <h5 class="fw-bold">Gondolas gancheiras</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas para centro de lojas.jpeg" />
+                                    <h5 class="fw-bold">Gondolas para centro de loja</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas papa filas/20190208_133107.jpg" />
+                                    <h5 class="fw-bold">Gondolas papa filas</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas rack/" />
+                                    <h5 class="fw-bold">Gondolas rack</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="balcoes">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/20201124_135812.jpg" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/20200416_163245 (1).jpg" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/IMG-20210721-WA0052.jpeg" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/IMG-20210409-WA0029.jpeg" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="vitrines">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/20200402_111512.jpg" />
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/20200512_103435.jpg" />
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/IMG-20200423-WA0023.jpg" />
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/WhatsApp Image 2017-03-14 at 08.28.53.jpeg" />
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="armarios">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armários roupeiros/Armario insalubre 4p.jpg" />
+                                    <h5 class="fw-bold">Armario insalubre</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armários roupeiros/Armario Roupeiro 4p.jpg" />
+                                    <h5 class="fw-bold">Armario roupeiro</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armários roupeiros/IMG-20200619-WA0008.jpg" />
+                                    <h5 class="fw-bold">Armários roupeiros</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armario roupeiro.jpg" />
+                                    <h5 class="fw-bold">Armario roupeiro</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="expositores">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores de pisos/20200519_080008.jpg" />
+                                    <h5 class="fw-bold">Expositores de pisos</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores de pisos/WhatsApp Image 2017-04-26 at 10.35.26.jpeg" />
+                                    <h5 class="fw-bold">Expositores de pisos</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores para tapetes/20171211_110616.jpg" />
+                                    <h5 class="fw-bold">Expositores para tapetes</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores para tapetes/20171211_110636.jpg" />
+                                    <h5 class="fw-bold">Expositores para tapetes</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="especiais">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes porta pneus/20171107_092848.jpg" />
+                                    <h5 class="fw-bold">Estantes porta pneus</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes para discos de freio/2012-05-15_16-18-41_973.jpg" />
+                                    <h5 class="fw-bold">Estantes para discos de freio</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Camas beliche.jpg" />
+                                    <h5 class="fw-bold">Camas beliche</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Organizador de varais de cortinas/IMG-20190816-WA0054.jpg" />
+                                    <h5 class="fw-bold">Organizador de varais de cortinas</h5>
+                                    <p>
+                                        Perfeita para o sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div id="pro2" class="tab-pane">
-                    Conteúdo do produto 2
-                </div>
-                <div id="pro3" class="tab-pane">
-                    Conteúdo do produto 3
-                </div>
-                <div id="pro4" class="tab-pane">
-                    Conteúdo do produto 4
-                </div>
-                <div id="pro5" class="tab-pane">
-                    Conteúdo do produto 5
-                </div>
-                <div id="pro6" class="tab-pane">
-                    Conteúdo do produto 6
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <div class="row">
+                    <h2 class="text-center">
+                        Contato
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h3 class="fs-4">Redes Sociais</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,6 +432,8 @@
 
     </div>
 
-    <script src="./lib/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

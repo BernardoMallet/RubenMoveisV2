@@ -2,16 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-.navbar-nav .nav-link.active {
+#cabecalho .nav-link {
     color: #fff;
+}
+
+#cabecalho .nav .nav-link.nav-link.active {
+    color: rgb(36, 110, 248);
+    background-color: whitesmoke;
+    font-weight: 700;
 }
 
 body {
     background-color: whitesmoke;
 }
-
 
 header {
     position: sticky;
@@ -20,12 +26,32 @@ header {
     background-color: rgb(36, 110, 248);
     color: #fff;
     z-index: 9;
-    margin-bottom: 5px;
 }
 
-.nav-link {
+#cabecalho .nav-link {
     text-align: center;
 }
+
+h4, h1, h2, h5 {
+    font-family: Pacifico, cursive;
+    font-weight: 600;
+}
+
+.nav-portofolio .nav-link.active {
+    background-color: rgb(36, 110, 248);
+    color: #fff;
+}
+
+.nav-portofolio .nav-link.active:hover {
+    background-color: rgb(36, 110, 248);
+    color: #fff;
+}
+
+.nav-portofolio .nav-link:hover {
+    color: rgb(36, 110, 248);
+}
+
+
 
 @media screen and (min-width: 1024px) {
     .carousel-item img {
@@ -35,6 +61,17 @@ header {
     .card img {
         height: 349px;
         width: 100%;
+    }
+
+    #avatar {
+        width: 200px;
+        height: 200px;
+
+    }
+
+    #portfolio img {
+        width: 176px;
+        height: 132px;
     }
 }
 
