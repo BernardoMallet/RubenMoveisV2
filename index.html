@@ -95,9 +95,9 @@
     <section id="sobreNos">
     <div class="container container-cards">
         <div class="row">
-            <div class="sectionSobreNos d-flex align-items-center w-100 col-lg-12">
+            <div class="sectionSobreNos d-flex align-items-center w-100 col-lg-12 col-sm-12">
                 <img class="rounded-circle m-4" id="avatar" src="./images/1517365956931.jpg" alt="" />
-                <div class="sobreNosDescricao d-flex flex-column align-items-start">
+                <div class="sobreNosDescricao">
                     <h4 class="sobreNosTitulo">
                         Sobre a Ruben Móveis
                     </h4>
@@ -153,7 +153,7 @@
                         <button type="button" data-bs-toggle="tab" data-bs-target="#vitrines" class="fw-bold text-start nav-link">Vitrines</button>
                         <button type="button" data-bs-toggle="tab" data-bs-target="#armarios" class="fw-bold text-start nav-link">Armarios</button>
                         <button type="button" data-bs-toggle="tab" data-bs-target="#expositores" class="fw-bold text-start nav-link">Expositores</button>
-                        <button type="button" data-bs-toggle="tab" data-bs-target="#especiais" class="fw-bold text-start nav-link">Especiais</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#especiais" class="fw-bold text-start nav-link mb-1">Especiais</button>
                     </nav>
                 </aside>
                 <div class="col-md-10">
@@ -398,33 +398,52 @@
         <div class="container">
             <div class="row">
                     <h2 class="text-center">
-                        Contato
+                        <i class="bi bi-person-lines-fill"></i>
+                        Fale conosco
                     </h2>
                     <div class="row">
-                        <div class="col-md-7">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        
+                        <div class="col-md-12 d-flex justify-content-around">
+                            <div class="contatoLink">
+                            <h3 class="tituloContato fs-4 mt-4 ms-4">
+                                <i class="bi bi-card-text"></i>
+                                Contato:
+                            </h3>
+                            <ul class="contatoLink mt-4">
+                                <li class="fs-5">
+                                    <a href="https://api.whatsapp.com/send?phone=+5521999049917">
+                                        <i class="bi bi-whatsapp"></i>
+                                        WhatsApp
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="">
-
+                                <li class="fs-5 mt-3">
+                                    <a href="mailto:ruben-moreira@bol.com.br">
+                                        <i class="bi bi-envelope-at"></i>
+                                        E-mail
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="">
-
+                                <li class="fs-5 mt-3">
+                                    <a href="tel:+5521999049917">
+                                        <i class="bi bi-telephone"></i>
+                                        (21) 99904-9917
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                    <div class="col-md-5">
-                        <div class="row">
-                            <h3 class="fs-4">Redes Sociais</h3>
+                            <div class="socialLink">
+                                <h3 class="fs-4 mt-4">
+                                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                                    Redes Sociais:
+                                </h3>
+                                <ul class="socialLink mt-4">
+                                    <li class="fs-5">
+                                        <a href="https://www.linkedin.com/in/ruben-moreira-santos-931b69106/">
+                                            <i class="bi bi-linkedin"></i>
+                                            LinkedIn
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -432,6 +451,9 @@
 
     </div>
 
+    <footer>
+            <p> &copy; 2023 Ruben Moreira - Todos os direitos reservados. </p>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

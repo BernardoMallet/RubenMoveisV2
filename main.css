@@ -28,11 +28,15 @@ header {
     z-index: 9;
 }
 
+.navbar {
+    width: 100%;
+}
+
 #cabecalho .nav-link {
     text-align: center;
 }
 
-h4, h1, h2, h5 {
+h4, h1, h2, h5, h3 {
     font-family: Pacifico, cursive;
     font-weight: 600;
 }
@@ -51,6 +55,39 @@ h4, h1, h2, h5 {
     color: rgb(36, 110, 248);
 }
 
+.socialLink li {
+    list-style: none;
+    display: inline;
+}
+
+.socialLink a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contatoLink li {
+    list-style-type: none;
+    display: block;
+}
+
+.contatoLink a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(36, 110, 248);
+}
+
+footer > p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 25px;
+}
 
 
 @media screen and (min-width: 1024px) {
@@ -73,6 +110,12 @@ h4, h1, h2, h5 {
         width: 176px;
         height: 132px;
     }
+
+    .sobreNosDescricao {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media  screen and (max-width: 640px) {
@@ -84,6 +127,17 @@ h4, h1, h2, h5 {
         height: 300px;
         width: 100%;
     }
+
+    .sectionSobreNos {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .sobreNosDescricao {
+        display: block;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 640px) {
@@ -94,5 +148,21 @@ h4, h1, h2, h5 {
     .card img {
         height: 300px;
         width: 100%;
+    }
+
+    #portfolio img {
+        width: 150px;
+        height: 240px;
+    }
+
+    .sectionSobreNos {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .sobreNosDescricao {
+        display: block;
+        text-align: center;
     }
 }
