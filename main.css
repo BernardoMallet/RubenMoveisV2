@@ -36,8 +36,11 @@ header {
     text-align: center;
 }
 
+.botaoWhatsapp > img {
+    width: 160px;
+}
+
 h4, h1, h2, h5, h3 {
-    font-family: Pacifico, cursive;
     font-weight: 600;
 }
 
