@@ -74,12 +74,13 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: ./public_html/
-        dangerous-clean-slate: false
+        server-dir: ./
+        dangerous-clean-slate: true
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
+          **/images_OLD/**
         protocol: ftp
         state-name: .ftp-deploy-sync-state.json
 
