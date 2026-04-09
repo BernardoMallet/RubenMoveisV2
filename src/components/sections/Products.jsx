@@ -22,6 +22,12 @@ import estantesBalcoes01 from '../../assets/images/estantes-balcoes-01.jpg'
 import estantesBalcoes02 from '../../assets/images/estantes-balcoes-02.jpg'
 import estantesBalcoes03 from '../../assets/images/estantes-balcoes-03.jpeg'
 
+// Bancadas images
+import bancadas01 from '../../assets/images/bancadas-01.jpg'
+import bancadas02 from '../../assets/images/bancadas-02.jpg'
+import bancadas03 from '../../assets/images/bancadas-03.jpg'
+import bancadas04 from '../../assets/images/bancadas-04.jpg'
+
 const CATEGORIES = [
   { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
   { id: 2, name: 'Estantes', description: 'Aço ou metalon + madeira', image: estantesImg },
@@ -91,9 +97,24 @@ const GALLERIES = {
   ],
   4: [ // Bancadas
     {
-      src: bancadasImg,
-      title: 'Bancadas Sob Medida',
-      description: 'Bancadas resistentes em aço com acabamento profissional.'
+      src: bancadas01,
+      title: 'Bancada para Oficina',
+      description: 'Bancada robusta e resistente para ambientes de trabalho pesado. Estrutura em aço com suporte para 500kg+.'
+    },
+    {
+      src: bancadas02,
+      title: 'Bancada Industrial',
+      description: 'Bancada profissional com acabamento industrial. Ideal para oficinas, fábricas e laboratórios.'
+    },
+    {
+      src: bancadas03,
+      title: 'Bancada com Prateleiras',
+      description: 'Sistema modular com prateleiras integradas para organização eficiente de ferramentas e materiais.'
+    },
+    {
+      src: bancadas04,
+      title: 'Bancada Personalizada',
+      description: 'Solução sob medida para suas necessidades específicas. Customizável em tamanho e acabamento.'
     }
   ],
   5: [ // Expositores
