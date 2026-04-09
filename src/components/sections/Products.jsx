@@ -12,8 +12,10 @@ import vitrinesImg from '../../assets/images/vitrines-expositoras.jpg'
 import gondola1 from '../../assets/images/gondolas-gancheiras.jpg'
 import gondola2 from '../../assets/images/gondolas-para-centro-de-lojas.jpeg'
 
-// Estantes images - using main image as placeholder until individual images are added
-import estantesMain from '../../assets/images/estantes-de-aco.jpg'
+// Estantes images - using existing optimized images
+import estantesAco from '../../assets/images/estantes-de-aco.jpg'
+import estantesMetalon from '../../assets/images/estantes-em-metalon-e-madeira.jpg'
+import estantesMini from '../../assets/images/estantes-mini-porta-pallet.jpg'
 
 const CATEGORIES = [
   { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
@@ -50,34 +52,19 @@ const GALLERIES = {
   ],
   2: [ // Estantes
     {
-      src: estantesMain,
-      title: 'Estantes de Aço - Modelo P1010281',
-      description: 'Estantes robustas em aço carbono com prateleiras reforçadas. Ideal para ambientes comerciais com alto fluxo.'
+      src: estantesAco,
+      title: 'Estantes de Aço',
+      description: 'Estantes robustas em aço carbono com alta resistência. Ideais para ambientes comerciais, galpões e armazéns com grande fluxo de movimentação.'
     },
     {
-      src: estantesMain,
-      title: 'Estantes com Acabamento Profissional',
-      description: 'Estrutura em aço com acabamento pintura epóxi. Resistente à corrosão e fácil limpeza.'
-    },
-    {
-      src: estantesMain,
-      title: 'Estantes Modulares',
-      description: 'Sistema de estantes modulares em aço que se adapta a qualquer espaço. Capacidade de até 600kg por prateleira.'
-    },
-    {
-      src: estantesMain,
+      src: estantesMetalon,
       title: 'Estantes em Metalon e Madeira',
-      description: 'Combinação de metalon com prateleiras em madeira. Estilo rústico e funcional para lojas modernas.'
+      description: 'Combinação moderna de estrutura em metalon com prateleiras em madeira. Visual rústico-moderno, perfeito para lojas que buscam estilo e funcionalidade.'
     },
     {
-      src: estantesMain,
-      title: 'Estantes Duplas para Armazém',
-      description: 'Estantes duplas frente-verso para aproveitar ao máximo o espaço disponível em galpões e armazéns.'
-    },
-    {
-      src: estantesMain,
-      title: 'Estantes com Acabamento Premium',
-      description: 'Estantes de aço com tratamento anti-corrosão e acabamento profissional. Perfeitas para vitrines e lojas.'
+      src: estantesMini,
+      title: 'Estantes Mini Porta Pallet',
+      description: 'Sistema compacto de estantes para armazenamento em páletes. Solução inteligente para maximizar o espaço em pequenas áreas de estoque.'
     }
   ],
   3: [ // Balcões
