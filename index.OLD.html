@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="./images/favicon_transparent_32x32.png" />
+    <title>Móveis de aço | Ruben Móveis - Estantes, gôndolas e muito mais!</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1 class="fw-bold">Ruben Móveis</h1>
+                <button type="button" class="navbar-toggler mb-2" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="nav navbar-nav nav-pills">
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link active" href="#inicio">
+                            <i class="bi bi-house-door me-1"></i>
+                            Início
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#sobreNos">
+                            <i class="bi bi-person-check me-1"></i>
+                            Sobre nós
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#portfolio">
+                            <i class="bi bi-card-text me-1"></i>
+                            Portfólio
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#contato">
+                            <i class="bi bi-chat-left-text me-1"></i>
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#header" data-bs-smooth-scrool="true">   
+
+    <section id="inicio">
+    <div class="container d-flex justify-content-center mb-5">
+        <div id="carousel-exemplo" class="carousel slide carousel-fade w-100" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="2000" class="carousel-item h-25 active">
+                    <img class="d-block w-100" src="./images/Gondolas para centro de lojas.jpeg" alt="Gôndolas" />
+                    <div class="carousel-caption">
+                        Gôndolas para centro de lojas
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item h-25" >
+                    <img class="d-block w-100" src="./images/Balcões para lojas.jpeg" alt="Balcão"/>
+                    <div class="carousel-caption">
+                        Balcões para lojas
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item h-25" >
+                    <img class="d-block w-100" src="./images/Bancadas sob medida.jpg" alt="Bancada" />
+                    <div class="carousel-caption">
+                        Bancadas sob medida
+                    </div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" class="active" data-bs-target="#carousel-exemplo" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="sobreNos">
+    <div class="container container-cards">
+        <div class="row">
+            <div class="sectionSobreNos d-flex align-items-center w-100 col-lg-12 col-sm-12">
+                <img class="rounded-circle m-4" id="avatar" src="./images/1517365956931.jpg" alt="Ruben Moreira" />
+                <div class="sobreNosDescricao">
+                    <h4 class="sobreNosTitulo">
+                        Sobre a Ruben Móveis
+                    </h4>
+                    <p class="sobreNosDescricao">
+                        Com mais de 35 anos trabalhados no mercado de móveis de aço, Ruben passou a ser notado por prestar um serviço de confiança, transparente e de cofiança.
+                    </p>
+                    <p class="sobreNosDescricao">
+                        Diante dessa fama e reconhecimento, veio a vontade empreender. Criando uma nova empresa e o inicio de um novo projeto! E você está mais do que convidado para ser nosso parceiro. 
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card mb-3">
+                        <img src="./images/gif ruben moveis.gif" alt="GIF Projeto">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Projetamos o que você pede
+                            </h4>
+                            <p class="card-text">
+                                Trabalhamos metodologias, planejamentos e tecnologia para garantir 
+                                a satisfação dos nossos clientes! 
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card mb-3">
+                        <img src="./images/obra pronta.JPG" alt="Foto obra de cliente pronta">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Sua ideia vira realidade!
+                            </h4>
+                            <p class="card-text">
+                                Fabricamos qualquer móvel de aço sobre qualquer medida. Venha fazer um orçamento conosco!
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="portfolio" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center pb-3">Portfólio</h2>
+            </div>
+            <div class="row">
+                <aside class="col-md-2">
+                    <nav class="nav nav-pills flex-column nav-portofolio">
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#estantes" class="fw-bold text-start nav-link active">Estantes</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#gondolas" class="fw-bold text-start nav-link">Gôndolas</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#balcoes" class="fw-bold text-start nav-link">Balcões</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#vitrines" class="fw-bold text-start nav-link">Vitrines</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#armarios" class="fw-bold text-start nav-link">Armarios</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#expositores" class="fw-bold text-start nav-link">Expositores</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#especiais" class="fw-bold text-start nav-link mb-1">Especiais</button>
+                    </nav>
+                </aside>
+                <div class="col-md-10">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="estantes">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes de aço.JPG" alt="Estantes" />
+                                    <h5 class="fw-bold">Estantes de aço</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes em metalon e madeira.jpg" alt="Estantes" />
+                                    <h5 class="fw-bold">Estantes em metalon e madeira</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes mini porta pallet.jpg" alt="Estantes" />
+                                    <h5 class="fw-bold">Estantes mini porta pallet</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/obra pronta.JPG" alt="Estantes" />
+                                    <h5 class="fw-bold">Estantes para estoque</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="gondolas">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas gancheiras.jpg" alt="Gôndolas" />
+                                    <h5 class="fw-bold">Gôndolas gancheiras</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas para centro de lojas.jpeg" alt="Gôndolas" />
+                                    <h5 class="fw-bold">Gôndolas para centro de loja</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas papa filas/20190208_133107.jpg" alt="Gôndolas"/>
+                                    <h5 class="fw-bold">Gôndolas papa filas</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Gondolas rack/" alt="Gôndolas" />
+                                    <h5 class="fw-bold">Gôndolas rack</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="balcoes">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/20201124_135812.jpg" alt="Balcões" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/20200416_163245 (1).jpg" alt="Balcões" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/IMG-20210721-WA0052.jpeg" alt="Balcões" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Balcões para lojas/IMG-20210409-WA0029.jpeg" alt="Balcões" />
+                                    <h5 class="fw-bold">Balcões para lojas</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="vitrines">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/20200402_111512.jpg" alt="Vitrines expositoras" />
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/20200512_103435.jpg" alt="Vitrines expositoras" />
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/IMG-20200423-WA0023.jpg" alt="Vitrines expositoras"/>
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Vitrines expositoras/WhatsApp Image 2017-03-14 at 08.28.53.jpeg" alt="Vitrines expositoras" />
+                                    <h5 class="fw-bold">Vitrines expositoras</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="armarios">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armários roupeiros/Armario insalubre 4p.jpg" alt="Armario" />
+                                    <h5 class="fw-bold">Armario insalubre</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armários roupeiros/Armario Roupeiro 4p.jpg" alt="Armario" />
+                                    <h5 class="fw-bold">Armario roupeiro</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armários roupeiros/IMG-20200619-WA0008.jpg" alt="Armario" />
+                                    <h5 class="fw-bold">Armários roupeiros</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Armario roupeiro.jpg" alt="Armario" />
+                                    <h5 class="fw-bold">Armario roupeiro</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="expositores">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores de pisos/20200519_080008.jpg" alt="Expositores" />
+                                    <h5 class="fw-bold">Expositores de pisos</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores de pisos/WhatsApp Image 2017-04-26 at 10.35.26.jpeg" alt="Expositores" />
+                                    <h5 class="fw-bold">Expositores de pisos</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores para tapetes/20171211_110616.jpg" alt="Expositores" />
+                                    <h5 class="fw-bold">Expositores para tapetes</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Expositores para tapetes/20171211_110636.jpg" alt="Expositores" />
+                                    <h5 class="fw-bold">Expositores para tapetes</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="especiais">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes porta pneus/20171107_092848.jpg" alt="Estantes porta pneus" />
+                                    <h5 class="fw-bold">Estantes porta pneus</h5>
+                                    <p>
+                                        Perfeita para o seu estoque e loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Estantes para discos de freio/2012-05-15_16-18-41_973.jpg" alt="Estantes para discos de freio" />
+                                    <h5 class="fw-bold">Estantes para discos de freio</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Camas beliche.jpg" alt="Camas beliche"/>
+                                    <h5 class="fw-bold">Camas beliche</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="d-block w-100" src="./images/Organizador de varais de cortinas/IMG-20190816-WA0054.jpg" alt="Organizador de varais de cortinas"/>
+                                    <h5 class="fw-bold">Organizador de varais de cortinas</h5>
+                                    <p>
+                                        Perfeita para a sua loja!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <div class="row">
+                    <h2 class="text-center">
+                        <i class="bi bi-person-lines-fill"></i>
+                        Fale conosco
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-around">
+                            <div class="contatoLink">
+                            <h3 class="tituloContato fs-4 mt-4 ms-4">
+                                <i class="bi bi-card-text"></i>
+                                Contato:
+                            </h3>
+                            <ul class="contatoLink mt-4">
+                                <li class="fs-5">
+                                    <a href="https://api.whatsapp.com/send?phone=+5521999049917">
+                                        <i class="bi bi-whatsapp"></i>
+                                        WhatsApp
+                                    </a>
+                                </li>
+                                <li class="fs-5 mt-3">
+                                    <a href="mailto:ruben-moreira@bol.com.br">
+                                        <i class="bi bi-envelope-at"></i>
+                                        E-mail
+                                    </a>
+                                </li>
+                                <li class="fs-5 mt-3">
+                                    <a href="tel:+5521999049917">
+                                        <i class="bi bi-telephone"></i>
+                                        (21) 99904-9917
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                            <div class="socialLink">
+                                <h3 class="fs-4 mt-4">
+                                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                                    Redes Sociais:
+                                </h3>
+                                <ul class="socialLink mt-4">
+                                    <li class="fs-5">
+                                        <a href="https://www.linkedin.com/in/ruben-moreira-santos-931b69106/">
+                                            <i class="bi bi-linkedin"></i>
+                                            LinkedIn
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <footer>
+            <p> &copy; 2026 Ruben Moreira - Todos os direitos reservados. </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
