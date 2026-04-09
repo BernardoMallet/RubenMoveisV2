@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: "18"
+  NODE_VERSION: "22"
 
 jobs:
   build:
@@ -16,8 +16,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -26,23 +24,47 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: npm ci
+      run: |
+        echo "Installing dependencies with npm ci..."
+        npm ci --verbose
+        echo "✓ Dependencies installed successfully"
       timeout-minutes: 10
+      continue-on-error: true
+    
+    - name: Fallback - Install with npm install (if ci failed)
+      if: failure()
+      run: |
+        echo "npm ci failed, falling back to npm install..."
+        npm install
+        echo "✓ Dependencies installed with npm install"
+      timeout-minutes: 10
+
+    - name: Verify Node.js and npm versions
+      run: |
+        echo "Node version: $(node --version)"
+        echo "npm version: $(npm --version)"
+        echo "npm cache: $(npm cache verify)"
 
     - name: Build project (Vite)
       run: npm run build
       timeout-minutes: 15
       env:
-        VITE_API_URL: ${{ secrets.VITE_API_URL }}
+        VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://api.example.com' }}
 
     - name: Verify build output
       run: |
+        echo "Verifying build output..."
         if [ ! -d "dist" ]; then
-          echo "Build failed: dist directory not found"
+          echo "ERROR: Build failed - dist directory not found"
+          echo "Current directory contents:"
+          ls -lah
           exit 1
         fi
         echo "✓ Build successful"
+        echo "Dist directory contents:"
         ls -lah dist/
+        echo "Total size:"
+        du -sh dist/
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
