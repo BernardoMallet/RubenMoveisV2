@@ -56,6 +56,21 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     steps:
+      - name: Check FTP Credentials
+        run: |
+          if [ -z "${{ secrets.FTP_HOST }}" ] || [ -z "${{ secrets.FTP_USER }}" ] || [ -z "${{ secrets.FTP_PASSWORD }}" ]; then
+            echo "❌ ERROR: FTP credentials not configured!"
+            echo ""
+            echo "Please add the following secrets to your GitHub repository:"
+            echo "1. FTP_HOST - Your FTP server hostname/IP"
+            echo "2. FTP_USER - Your FTP username"
+            echo "3. FTP_PASSWORD - Your FTP password"
+            echo ""
+            echo "Go to: Settings > Secrets and Variables > Actions"
+            exit 1
+          fi
+          echo "✓ FTP credentials are configured"
+
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
