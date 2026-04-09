@@ -1,10 +1,16 @@
+import { useState } from 'react'
 import Button from '../common/Button'
+import GalleryModal from '../common/GalleryModal'
 import gondolasImg from '../../assets/images/gondolas-gancheiras.jpg'
 import estantesImg from '../../assets/images/estantes-de-aco.jpg'
 import balcoesImg from '../../assets/images/balcoes-para-lojas.jpeg'
 import bancadasImg from '../../assets/images/bancadas-sob-medida.jpg'
 import expositoresImg from '../../assets/images/vitrines-expositoras.jpg'
 import vitrinesImg from '../../assets/images/vitrines-expositoras.jpg'
+
+// Import gondola gallery images
+import gondola1 from '../../assets/images/gondolas-gancheiras.jpg'
+import gondola2 from '../../assets/images/gondolas-para-centro-de-lojas.jpeg'
 
 const CATEGORIES = [
   { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
@@ -15,7 +21,85 @@ const CATEGORIES = [
   { id: 6, name: 'Vitrines', description: 'Luxuosas e profissionais', image: vitrinesImg }
 ]
 
+// Gallery data for each category
+const GALLERIES = {
+  1: [ // Gôndolas
+    {
+      src: gondola1,
+      title: 'Gôndolas Gancheiras',
+      description: 'Gôndolas com ganchos para display de produtos. Ideais para lojas de roupas e acessórios.'
+    },
+    {
+      src: gondola2,
+      title: 'Gôndolas para Centro de Lojas',
+      description: 'Sistema de gôndolas duplas para centros comerciais. Máxima capacidade de exposição.'
+    },
+    {
+      src: gondola1,
+      title: 'Gôndolas Promocionais',
+      description: 'Gôndolas móveis para campanhas e promoções sazonais.'
+    },
+    {
+      src: gondola2,
+      title: 'Gôndolas Especializadas',
+      description: 'Soluções customizadas para diferentes tipos de produtos.'
+    }
+  ],
+  2: [ // Estantes
+    {
+      src: estantesImg,
+      title: 'Estantes de Aço',
+      description: 'Estantes robustas em aço carbono com alta resistência.'
+    },
+    {
+      src: estantesImg,
+      title: 'Estantes em Metalon',
+      description: 'Estrutura em metalon com prateleiras em madeira.'
+    }
+  ],
+  3: [ // Balcões
+    {
+      src: balcoesImg,
+      title: 'Balcões para Lojas',
+      description: 'Balcões personalizados sob medida para seu comércio.'
+    }
+  ],
+  4: [ // Bancadas
+    {
+      src: bancadasImg,
+      title: 'Bancadas Sob Medida',
+      description: 'Bancadas resistentes em aço com acabamento profissional.'
+    }
+  ],
+  5: [ // Expositores
+    {
+      src: expositoresImg,
+      title: 'Expositores Profissionais',
+      description: 'Expositores para destacar seus produtos em loja.'
+    }
+  ],
+  6: [ // Vitrines
+    {
+      src: vitrinesImg,
+      title: 'Vitrines Expositoras',
+      description: 'Vitrines de vidro luxuosas para produtos especiais.'
+    }
+  ]
+}
+
 export default function Products() {
+  const [selectedCategory, setSelectedCategory] = useState(null)
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+
+  const openGallery = (categoryId) => {
+    setSelectedCategory(categoryId)
+    setIsGalleryOpen(true)
+  }
+
+  const closeGallery = () => {
+    setIsGalleryOpen(false)
+    setTimeout(() => setSelectedCategory(null), 300) // Wait for modal animation
+  }
   return (
     <section id="produtos" className="py-16 sm:py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -48,6 +132,7 @@ export default function Products() {
                 <Button
                   variant="ghost"
                   className="p-0 text-primary-600 hover:text-primary-700"
+                  onClick={() => openGallery(category.id)}
                 >
                   Ver mais →
                 </Button>
@@ -56,6 +141,16 @@ export default function Products() {
           ))}
         </div>
       </div>
+
+      {/* Gallery Modal */}
+      {selectedCategory && (
+        <GalleryModal
+          isOpen={isGalleryOpen}
+          onClose={closeGallery}
+          category={CATEGORIES.find(c => c.id === selectedCategory)?.name}
+          images={GALLERIES[selectedCategory]}
+        />
+      )}
     </section>
   )
 }
