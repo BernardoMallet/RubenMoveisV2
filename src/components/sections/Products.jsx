@@ -17,6 +17,11 @@ import estantesAco from '../../assets/images/estantes-de-aco.jpg'
 import estantesMetalon from '../../assets/images/estantes-em-metalon-e-madeira.jpg'
 import estantesMini from '../../assets/images/estantes-mini-porta-pallet.jpg'
 
+// Estantes balcões images - recently added
+import estantesBalcoes01 from '../../assets/images/estantes-balcoes-01.jpg'
+import estantesBalcoes02 from '../../assets/images/estantes-balcoes-02.jpg'
+import estantesBalcoes03 from '../../assets/images/estantes-balcoes-03.jpeg'
+
 const CATEGORIES = [
   { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
   { id: 2, name: 'Estantes', description: 'Aço ou metalon + madeira', image: estantesImg },
@@ -65,6 +70,21 @@ const GALLERIES = {
       src: estantesMini,
       title: 'Estantes Mini Porta Pallet',
       description: 'Sistema compacto de estantes para armazenamento em páletes. Solução inteligente para maximizar o espaço em pequenas áreas de estoque.'
+    },
+    {
+      src: estantesBalcoes01,
+      title: 'Estantes com Balcão Integrado',
+      description: 'Combinação de estantes com balcão para atendimento ao cliente. Solução 2-em-1 ideal para lojas que precisam de espaço de vendas e armazenagem.'
+    },
+    {
+      src: estantesBalcoes02,
+      title: 'Balcão com Prateleiras de Aço',
+      description: 'Balcão robusto com prateleiras de aço integradas. Sistema seguro e profissional para lojas de grande circulação.'
+    },
+    {
+      src: estantesBalcoes03,
+      title: 'Conjunto Estante + Balcão',
+      description: 'Sistema modular combinando estantes de exposição com balcão de atendimento. Maximiza o aproveitamento do espaço em lojas.'
     }
   ],
   3: [ // Balcões
