@@ -34,6 +34,11 @@ import expositores02 from '../../assets/images/expositores-02.jpg'
 import expositores03 from '../../assets/images/expositores-03.jpeg'
 import expositores04 from '../../assets/images/expositores-04.jpeg'
 
+// Vitrines images
+import vitrines01 from '../../assets/images/vitrines-01.jpeg'
+import vitrines02 from '../../assets/images/vitrines-02.jpg'
+import vitrines03 from '../../assets/images/vitrines-03.jpeg'
+
 const CATEGORIES = [
   { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
   { id: 2, name: 'Estantes', description: 'Aço ou metalon + madeira', image: estantesImg },
@@ -147,9 +152,19 @@ const GALLERIES = {
   ],
   6: [ // Vitrines
     {
-      src: vitrinesImg,
-      title: 'Vitrines Expositoras',
-      description: 'Vitrines de vidro luxuosas para produtos especiais.'
+      src: vitrines01,
+      title: 'Vitrine Luxuosa com Vidro Temperado',
+      description: 'Vitrine de vidro temperado com estrutura em aço inox. Ideal para destacar produtos de alto valor.'
+    },
+    {
+      src: vitrines02,
+      title: 'Vitrine Modular Premium',
+      description: 'Sistema de vitrine modular com vidro de proteção. Customizável para diferentes tamanhos de produtos.'
+    },
+    {
+      src: vitrines03,
+      title: 'Vitrine Expositora Profissional',
+      description: 'Vitrine profissional em vidro temperado com acabamento de luxo. Perfeita para joalherias e lojas de marca.'
     }
   ]
 }
