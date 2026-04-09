@@ -70,28 +70,23 @@ const GALLERIES = {
       src: estantesMini,
       title: 'Estantes Mini Porta Pallet',
       description: 'Sistema compacto de estantes para armazenamento em páletes. Solução inteligente para maximizar o espaço em pequenas áreas de estoque.'
-    },
-    {
-      src: estantesBalcoes01,
-      title: 'Estantes com Balcão Integrado',
-      description: 'Combinação de estantes com balcão para atendimento ao cliente. Solução 2-em-1 ideal para lojas que precisam de espaço de vendas e armazenagem.'
-    },
-    {
-      src: estantesBalcoes02,
-      title: 'Balcão com Prateleiras de Aço',
-      description: 'Balcão robusto com prateleiras de aço integradas. Sistema seguro e profissional para lojas de grande circulação.'
-    },
-    {
-      src: estantesBalcoes03,
-      title: 'Conjunto Estante + Balcão',
-      description: 'Sistema modular combinando estantes de exposição com balcão de atendimento. Maximiza o aproveitamento do espaço em lojas.'
     }
   ],
   3: [ // Balcões
     {
-      src: balcoesImg,
-      title: 'Balcões para Lojas',
-      description: 'Balcões personalizados sob medida para seu comércio.'
+      src: estantesBalcoes01,
+      title: 'Balcão com Vitrine Integrada',
+      description: 'Balcão com vitrine embutida para destaque de produtos. Estrutura robusta em aço com vidro temperado.'
+    },
+    {
+      src: estantesBalcoes02,
+      title: 'Balcão com Prateleiras de Aço',
+      description: 'Balcão profissional com prateleiras de aço integradas. Ideal para lojas com alto fluxo de atendimento.'
+    },
+    {
+      src: estantesBalcoes03,
+      title: 'Balcão Modular para Lojas',
+      description: 'Sistema modular de balcão que se adapta a diferentes espaços. Estrutura personalizável sob medida.'
     }
   ],
   4: [ // Bancadas
