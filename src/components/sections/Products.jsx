@@ -28,12 +28,18 @@ import bancadas02 from '../../assets/images/bancadas-02.jpg'
 import bancadas03 from '../../assets/images/bancadas-03.jpg'
 import bancadas04 from '../../assets/images/bancadas-04.jpg'
 
+// Expositores images
+import expositores01 from '../../assets/images/expositores-01.jpg'
+import expositores02 from '../../assets/images/expositores-02.jpg'
+import expositores03 from '../../assets/images/expositores-03.jpeg'
+import expositores04 from '../../assets/images/expositores-04.jpeg'
+
 const CATEGORIES = [
   { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
   { id: 2, name: 'Estantes', description: 'Aço ou metalon + madeira', image: estantesImg },
   { id: 3, name: 'Balcões', description: 'Sob medida para seu comércio', image: balcoesImg },
   { id: 4, name: 'Bancadas', description: 'Resistentes e duráveis', image: bancadasImg },
-  { id: 5, name: 'Expositores', description: 'Para produtos em destaque', image: expositoresImg },
+  { id: 5, name: 'Expositores', description: 'Para produtos em destaque', image: expositores01 },
   { id: 6, name: 'Vitrines', description: 'Luxuosas e profissionais', image: vitrinesImg }
 ]
 
@@ -119,9 +125,24 @@ const GALLERIES = {
   ],
   5: [ // Expositores
     {
-      src: expositoresImg,
-      title: 'Expositores Profissionais',
-      description: 'Expositores para destacar seus produtos em loja.'
+      src: expositores01,
+      title: 'Expositor de Pisos',
+      description: 'Expositor profissional para exibição de pisos e revestimentos. Design elegante que realça produtos.'
+    },
+    {
+      src: expositores02,
+      title: 'Expositor para Tapetes',
+      description: 'Sistema modular para exibição de tapetes e cortinas. Fácil de montar e rearranjar.'
+    },
+    {
+      src: expositores03,
+      title: 'Expositor para Tecidos',
+      description: 'Expositor versátil para tecidos, cortinas e acabamentos. Estrutura em aço com acabamento profissional.'
+    },
+    {
+      src: expositores04,
+      title: 'Expositor Modular',
+      description: 'Sistema modular e personalizável para qualquer tipo de produto. Adapta-se ao seu espaço.'
     }
   ],
   6: [ // Vitrines
