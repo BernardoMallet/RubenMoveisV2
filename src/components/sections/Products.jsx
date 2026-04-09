@@ -12,6 +12,9 @@ import vitrinesImg from '../../assets/images/vitrines-expositoras.jpg'
 import gondola1 from '../../assets/images/gondolas-gancheiras.jpg'
 import gondola2 from '../../assets/images/gondolas-para-centro-de-lojas.jpeg'
 
+// Estantes images - using main image as placeholder until individual images are added
+import estantesMain from '../../assets/images/estantes-de-aco.jpg'
+
 const CATEGORIES = [
   { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
   { id: 2, name: 'Estantes', description: 'Aço ou metalon + madeira', image: estantesImg },
@@ -47,14 +50,34 @@ const GALLERIES = {
   ],
   2: [ // Estantes
     {
-      src: estantesImg,
-      title: 'Estantes de Aço',
-      description: 'Estantes robustas em aço carbono com alta resistência.'
+      src: estantesMain,
+      title: 'Estantes de Aço - Modelo P1010281',
+      description: 'Estantes robustas em aço carbono com prateleiras reforçadas. Ideal para ambientes comerciais com alto fluxo.'
     },
     {
-      src: estantesImg,
-      title: 'Estantes em Metalon',
-      description: 'Estrutura em metalon com prateleiras em madeira.'
+      src: estantesMain,
+      title: 'Estantes com Acabamento Profissional',
+      description: 'Estrutura em aço com acabamento pintura epóxi. Resistente à corrosão e fácil limpeza.'
+    },
+    {
+      src: estantesMain,
+      title: 'Estantes Modulares',
+      description: 'Sistema de estantes modulares em aço que se adapta a qualquer espaço. Capacidade de até 600kg por prateleira.'
+    },
+    {
+      src: estantesMain,
+      title: 'Estantes em Metalon e Madeira',
+      description: 'Combinação de metalon com prateleiras em madeira. Estilo rústico e funcional para lojas modernas.'
+    },
+    {
+      src: estantesMain,
+      title: 'Estantes Duplas para Armazém',
+      description: 'Estantes duplas frente-verso para aproveitar ao máximo o espaço disponível em galpões e armazéns.'
+    },
+    {
+      src: estantesMain,
+      title: 'Estantes com Acabamento Premium',
+      description: 'Estantes de aço com tratamento anti-corrosão e acabamento profissional. Perfeitas para vitrines e lojas.'
     }
   ],
   3: [ // Balcões
