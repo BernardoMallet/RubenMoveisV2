@@ -78,21 +78,18 @@ jobs:
           path: dist/
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: locaweb/ftp-deploy@1.0.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: ./
-          dangerous-clean-slate: true
+          ftp_host: ${{ secrets.FTP_HOST }}
+          ftp_user: ${{ secrets.FTP_USER }}
+          ftp_password: ${{ secrets.FTP_PASSWORD }}
+          local_dir: ./dist/
+          remote_dir: ./
+          clean: true
           exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/images_OLD/**
-          protocol: ftp
-          state-name: .ftp-deploy-sync-state.json
+            .git*
+            node_modules
+            images_OLD
 
   post-deploy:
     name: Post Deploy Validation
