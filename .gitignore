@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/dist
+/build
+
+# Vite
+/.vite
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.*.local
+*.log
+*.log.*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.project
+.classpath
+*.rar
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Arquivos antigos (opcional - comente se quiser sincronizar)
+# images_OLD/
+# index.OLD.html
+# main.OLD.css
+
+# IDE
+*.swp
+*.swo
+*~
