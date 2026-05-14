@@ -1,3 +1,5 @@
+import { Phone, Mail, MessageCircle } from 'lucide-react'
+
 export default function Footer() {
   return (
     <footer className="bg-primary-700 text-white py-12">
@@ -28,18 +30,21 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Contato</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="tel:+5521999049917" className="hover:text-primary-300">
-                  📞 (21) 9990-49917
+                <a href="tel:+5521999049917" className="hover:text-primary-300 flex items-center gap-2">
+                  <Phone size={16} />
+                  <span>(21) 9990-49917</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:ruben-moreira@bol.com.br" className="hover:text-primary-300">
-                  📧 ruben-moreira@bol.com.br
+                <a href="mailto:ruben-moreira@bol.com.br" className="hover:text-primary-300 flex items-center gap-2">
+                  <Mail size={16} />
+                  <span>ruben-moreira@bol.com.br</span>
                 </a>
               </li>
               <li>
-                <a href="https://api.whatsapp.com/send?phone=+5521999049917" target="_blank" rel="noopener noreferrer" className="hover:text-primary-300">
-                  💬 WhatsApp
+                <a href="https://api.whatsapp.com/send?phone=+5521999049917" target="_blank" rel="noopener noreferrer" className="hover:text-primary-300 flex items-center gap-2">
+                  <MessageCircle size={16} />
+                  <span>WhatsApp</span>
                 </a>
               </li>
             </ul>

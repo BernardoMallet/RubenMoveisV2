@@ -1,4 +1,5 @@
 import ContactForm from '../components/forms/ContactForm'
+import { Phone, Mail, MessageCircle, MapPin, Clock } from 'lucide-react'
 
 export default function Contato() {
   return (
@@ -28,7 +29,10 @@ export default function Contato() {
                 <div className="space-y-6">
                   {/* Phone */}
                   <div>
-                    <h4 className="font-bold mb-2">📞 Telefone</h4>
+                    <h4 className="font-bold mb-2 flex items-center gap-2">
+                      <Phone size={20} className="text-primary-600" />
+                      Telefone
+                    </h4>
                     <a
                       href="tel:+5521999049917"
                       className="text-primary-600 hover:text-primary-700"
@@ -39,7 +43,10 @@ export default function Contato() {
 
                   {/* Email */}
                   <div>
-                    <h4 className="font-bold mb-2">📧 Email</h4>
+                    <h4 className="font-bold mb-2 flex items-center gap-2">
+                      <Mail size={20} className="text-primary-600" />
+                      Email
+                    </h4>
                     <a
                       href="mailto:ruben-moreira@bol.com.br"
                       className="text-primary-600 hover:text-primary-700"
@@ -50,7 +57,10 @@ export default function Contato() {
 
                   {/* WhatsApp */}
                   <div>
-                    <h4 className="font-bold mb-2">💬 WhatsApp</h4>
+                    <h4 className="font-bold mb-2 flex items-center gap-2">
+                      <MessageCircle size={20} className="text-primary-600" />
+                      WhatsApp
+                    </h4>
                     <a
                       href="https://api.whatsapp.com/send?phone=+5521999049917"
                       target="_blank"
@@ -63,13 +73,19 @@ export default function Contato() {
 
                   {/* Location */}
                   <div>
-                    <h4 className="font-bold mb-2">📍 Localização</h4>
+                    <h4 className="font-bold mb-2 flex items-center gap-2">
+                      <MapPin size={20} className="text-primary-600" />
+                      Localização
+                    </h4>
                     <p className="text-neutral-600">Rio de Janeiro, RJ</p>
                   </div>
 
                   {/* Hours */}
                   <div>
-                    <h4 className="font-bold mb-2">🕒 Horário de Funcionamento</h4>
+                    <h4 className="font-bold mb-2 flex items-center gap-2">
+                      <Clock size={20} className="text-primary-600" />
+                      Horário de Funcionamento
+                    </h4>
                     <p className="text-neutral-600">Segunda a Sexta: 8h às 18h</p>
                     <p className="text-neutral-600">Sábado: 8h às 12h</p>
                   </div>

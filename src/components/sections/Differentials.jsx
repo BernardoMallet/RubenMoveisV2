@@ -1,11 +1,12 @@
 import Button from '../common/Button'
+import { Wrench, Truck, Shield, Headphones, MessageCircle } from 'lucide-react'
 
 export default function Differentials() {
   const differentials = [
-    { icon: '🔧', title: 'Customização Total', description: 'Qualquer medida que você precisar' },
-    { icon: '⚡', title: 'Entrega Rápida', description: 'De 2 a 4 semanas em RJ' },
-    { icon: '💪', title: 'Estrutura Durável', description: 'Aço em alta qualidade' },
-    { icon: '📞', title: 'Suporte Dedicado', description: 'Desde projeto até instalação' }
+    { icon: Wrench, title: 'Customização Total', description: 'Qualquer medida que você precisar' },
+    { icon: Truck, title: 'Entrega Rápida', description: 'De 2 a 4 semanas em RJ' },
+    { icon: Shield, title: 'Estrutura Durável', description: 'Aço em alta qualidade' },
+    { icon: Headphones, title: 'Suporte Dedicado', description: 'Desde projeto até instalação' }
   ]
 
   return (
@@ -16,13 +17,18 @@ export default function Differentials() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {differentials.map((diff, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-5xl mb-4">{diff.icon}</div>
-              <h3 className="font-bold mb-2 font-display">{diff.title}</h3>
-              <p className="text-neutral-600 text-sm">{diff.description}</p>
-            </div>
-          ))}
+          {differentials.map((diff, idx) => {
+            const IconComponent = diff.icon
+            return (
+              <div key={idx} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="flex justify-center mb-4">
+                  <IconComponent size={48} className="text-primary-600" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-bold mb-2 font-display">{diff.title}</h3>
+                <p className="text-neutral-600 text-sm">{diff.description}</p>
+              </div>
+            )
+          })}
         </div>
 
         <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-12 rounded-xl text-center shadow-xl">
@@ -35,7 +41,7 @@ export default function Differentials() {
             className="inline-block"
           >
             <button className="bg-white text-primary-600 font-bold py-4 px-10 rounded-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-3">
-              <span className="text-2xl">💬</span>
+              <MessageCircle size={24} />
               <span>Chamar no WhatsApp</span>
             </button>
           </a>

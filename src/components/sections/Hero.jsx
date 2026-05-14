@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Button from '../common/Button'
+import { FileText, MessageCircle, ChevronDown } from 'lucide-react'
 import gondolasImg from '../../assets/images/gondolas-para-centro-de-lojas.jpeg'
 import balcoesImg from '../../assets/images/balcoes-para-lojas.jpeg'
 import bancadasImg from '../../assets/images/bancadas-sob-medida.jpg'
@@ -53,7 +54,8 @@ export default function Hero() {
             variant="primary"
             onClick={() => scrollTo('contato')}
           >
-            📋 Solicitar Orçamento
+            <FileText size={20} />
+            Solicitar Orçamento
           </Button>
           <Button
             size="lg"
@@ -61,7 +63,8 @@ export default function Hero() {
             className="text-white border-white hover:bg-white/10"
             onClick={() => window.location.href = 'https://api.whatsapp.com/send?phone=+5521999049917'}
           >
-            📞 WhatsApp
+            <MessageCircle size={20} />
+            WhatsApp
           </Button>
         </div>
 
@@ -84,7 +87,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="text-white text-3xl">▼</div>
+        <ChevronDown size={32} className="text-white" strokeWidth={1.5} />
       </div>
     </section>
   )
