@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import Button from '../components/common/Button'
+import GalleryModal from '../components/common/GalleryModal'
 import gondolasImg from '../assets/images/gondolas-gancheiras.jpg'
 import estantesImg from '../assets/images/estantes-de-aco.jpg'
 import estantesMetalonImg from '../assets/images/estantes-em-metalon-e-madeira.jpg'
@@ -10,18 +12,112 @@ import estanteMiniImg from '../assets/images/estantes-mini-porta-pallet.jpg'
 import obraImg from '../assets/images/obra-pronta.jpg'
 
 const PRODUCTS = [
-  { id: 1, name: 'Gôndolas', description: 'Para lojas e centros comerciais', image: gondolasImg },
-  { id: 2, name: 'Estantes de aço', description: 'Aço resistente e durável', image: estantesImg },
-  { id: 3, name: 'Estantes metalon', description: 'Metalon com madeira', image: estantesMetalonImg },
-  { id: 4, name: 'Balcões', description: 'Sob medida para seu comércio', image: balcoesImg },
-  { id: 5, name: 'Bancadas', description: 'Resistentes e práticas', image: bancadasImg },
-  { id: 6, name: 'Expositores', description: 'Para produtos em destaque', image: expositoresImg },
-  { id: 7, name: 'Vitrines', description: 'Luxuosas e profissionais', image: vitrinesImg },
-  { id: 8, name: 'Estantes Mini', description: 'Organizadores de espaço', image: estanteMiniImg },
-  { id: 9, name: 'Projetos', description: 'Sua ideia vira realidade', image: obraImg }
+  { 
+    id: 1, 
+    name: 'Gôndolas', 
+    description: 'Para lojas e centros comerciais', 
+    image: gondolasImg,
+    gallery: [
+      { src: gondolasImg, title: 'Gôndola Premium', description: 'Gôndola profissional para lojas' },
+      { src: gondolasImg, title: 'Gôndola Grande', description: 'Modelo extra grande' }
+    ]
+  },
+  { 
+    id: 2, 
+    name: 'Estantes de aço', 
+    description: 'Aço resistente e durável', 
+    image: estantesImg,
+    gallery: [
+      { src: estantesImg, title: 'Estante Grande', description: 'Estante de aço alta capacidade' },
+      { src: estantesImg, title: 'Estante Dupla', description: 'Estante dupla para carga pesada' }
+    ]
+  },
+  { 
+    id: 3, 
+    name: 'Estantes metalon', 
+    description: 'Metalon com madeira', 
+    image: estantesMetalonImg,
+    gallery: [
+      { src: estantesMetalonImg, title: 'Estante Metalon', description: 'Estante em metalon e madeira' },
+      { src: estantesMetalonImg, title: 'Estante Industrial', description: 'Modelo industrial com madeira' }
+    ]
+  },
+  { 
+    id: 4, 
+    name: 'Balcões', 
+    description: 'Sob medida para seu comércio', 
+    image: balcoesImg,
+    gallery: [
+      { src: balcoesImg, title: 'Balcão Padrão', description: 'Balcão sob medida' },
+      { src: balcoesImg, title: 'Balcão Premium', description: 'Balcão com acabamento premium' }
+    ]
+  },
+  { 
+    id: 5, 
+    name: 'Bancadas', 
+    description: 'Resistentes e práticas', 
+    image: bancadasImg,
+    gallery: [
+      { src: bancadasImg, title: 'Bancada Simples', description: 'Bancada de aço' },
+      { src: bancadasImg, title: 'Bancada Dupla', description: 'Bancada dupla reforçada' }
+    ]
+  },
+  { 
+    id: 6, 
+    name: 'Expositores', 
+    description: 'Para produtos em destaque', 
+    image: expositoresImg,
+    gallery: [
+      { src: expositoresImg, title: 'Expositor Stand', description: 'Expositor em pé' },
+      { src: expositoresImg, title: 'Expositor Parede', description: 'Expositor para parede' }
+    ]
+  },
+  { 
+    id: 7, 
+    name: 'Vitrines', 
+    description: 'Luxuosas e profissionais', 
+    image: vitrinesImg,
+    gallery: [
+      { src: vitrinesImg, title: 'Vitrine Grande', description: 'Vitrine expositora premium' },
+      { src: vitrinesImg, title: 'Vitrine Modulada', description: 'Vitrine com módulos' }
+    ]
+  },
+  { 
+    id: 8, 
+    name: 'Estantes Mini', 
+    description: 'Organizadores de espaço', 
+    image: estanteMiniImg,
+    gallery: [
+      { src: estanteMiniImg, title: 'Mini Porta Pallet', description: 'Organizador compacto' },
+      { src: estanteMiniImg, title: 'Mini Estante', description: 'Estante em tamanho reduzido' }
+    ]
+  },
+  { 
+    id: 9, 
+    name: 'Projetos', 
+    description: 'Sua ideia vira realidade', 
+    image: obraImg,
+    gallery: [
+      { src: obraImg, title: 'Projeto Completo', description: 'Projeto executado' },
+      { src: obraImg, title: 'Entrega Final', description: 'Obra pronta para uso' }
+    ]
+  }
 ]
 
 export default function Produtos() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState(null)
+
+  const openModal = (product) => {
+    setSelectedProduct(product)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedProduct(null)
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-primary-900 to-primary-600 text-white py-16">
@@ -52,6 +148,7 @@ export default function Produtos() {
                   <Button
                     variant="ghost"
                     className="p-0 text-primary-600 hover:text-primary-700"
+                    onClick={() => openModal(product)}
                   >
                     Saiba mais →
                   </Button>
@@ -75,6 +172,15 @@ export default function Produtos() {
           </div>
         </div>
       </section>
+
+      {selectedProduct && (
+        <GalleryModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          category={selectedProduct.name}
+          images={selectedProduct.gallery}
+        />
+      )}
     </div>
   )
 }
