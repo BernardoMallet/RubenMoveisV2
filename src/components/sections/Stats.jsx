@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import rubenImg from '../../assets/images/ruben-moreira.jpg'
 import obraImg from '../../assets/images/obra-pronta.jpg'
+import suaIdeiaImg from '../../assets/images/suaIdeia.jpg'
 
 function Counter({ target, label }) {
   const [count, setCount] = useState(0)
@@ -73,8 +74,8 @@ export default function Stats() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
             <img 
-              src={obraImg} 
-              alt="Obra pronta" 
+              src={suaIdeiaImg} 
+              alt="Sua ideia vira realidade" 
               className="w-full h-48 object-cover"
             />
             <div className="p-6">

@@ -9,8 +9,12 @@ import expositoresImg from '../../assets/images/vitrines-expositoras.jpg'
 import vitrinesImg from '../../assets/images/vitrines-expositoras.jpg'
 
 // Import gondola gallery images
-import gondola1 from '../../assets/images/gondolas-gancheiras.jpg'
-import gondola2 from '../../assets/images/gondolas-para-centro-de-lojas.jpeg'
+import gondolaWall1 from '../../assets/images/gondolas/de parede/parede(1).png'
+import gondolaWall3 from '../../assets/images/gondolas/de parede/parede(3).png'
+import gondolaCenter7 from '../../assets/images/gondolas/de centro de loja/centro(7).png'
+import gondolaCenter8 from '../../assets/images/gondolas/de centro de loja/centro(8).png'
+import gondolaCenter9 from '../../assets/images/gondolas/de centro de loja/centro(9).png'
+import gondolaCenter10 from '../../assets/images/gondolas/de centro de loja/centro(10).png'
 
 // Estantes images - using existing optimized images
 import estantesAco from '../../assets/images/estantes-de-aco.jpg'
@@ -33,6 +37,18 @@ import expositores01 from '../../assets/images/expositores-01.jpg'
 import expositores02 from '../../assets/images/expositores-02.jpg'
 import expositores03 from '../../assets/images/expositores-03.jpeg'
 import expositores04 from '../../assets/images/expositores-04.jpeg'
+import bancoExpo2 from '../../assets/images/bancoExpo2.png'
+import bancoExpo3 from '../../assets/images/bancoExpo3.png'
+import bancaExpo from '../../assets/images/bancaExpo.png'
+
+// Acessórios images
+import acessorios01 from '../../assets/images/Acessórios/acessorios1.png'
+import acessorios02 from '../../assets/images/Acessórios/acessorios2.png'
+import acessorios03 from '../../assets/images/Acessórios/acessorios3.png'
+import acessorios04 from '../../assets/images/Acessórios/acessorios4.png'
+import acessorios05 from '../../assets/images/Acessórios/acessorios5.png'
+import acessorios06 from '../../assets/images/Acessórios/acessorios6.png'
+import acessorios07 from '../../assets/images/Acessórios/acessorios7.png'
 
 // Vitrines images
 import vitrines01 from '../../assets/images/vitrines-01.jpeg'
@@ -45,31 +61,42 @@ const CATEGORIES = [
   { id: 3, name: 'Balcões', description: 'Sob medida para seu comércio', image: balcoesImg },
   { id: 4, name: 'Bancadas', description: 'Resistentes e duráveis', image: bancadasImg },
   { id: 5, name: 'Expositores', description: 'Para produtos em destaque', image: expositores01 },
-  { id: 6, name: 'Vitrines', description: 'Luxuosas e profissionais', image: vitrinesImg }
+  { id: 6, name: 'Vitrines', description: 'Luxuosas e profissionais', image: vitrinesImg },
+  { id: 7, name: 'Acessórios', description: 'Peças e suportes sob medida', image: acessorios01 }
 ]
 
 // Gallery data for each category
 const GALLERIES = {
   1: [ // Gôndolas
     {
-      src: gondola1,
-      title: 'Gôndolas Gancheiras',
-      description: 'Gôndolas com ganchos para display de produtos. Ideais para lojas de roupas e acessórios.'
+      src: gondolaWall1,
+      title: 'Gôndolas de Parede',
+      description: 'Diversas medidas'
     },
     {
-      src: gondola2,
-      title: 'Gôndolas para Centro de Lojas',
-      description: 'Sistema de gôndolas duplas para centros comerciais. Máxima capacidade de exposição.'
+      src: gondolaWall3,
+      title: 'Gôndolas de Parede',
+      description: 'Diversas medidas'
     },
     {
-      src: gondola1,
-      title: 'Gôndolas Promocionais',
-      description: 'Gôndolas móveis para campanhas e promoções sazonais.'
+      src: gondolaCenter7,
+      title: 'Gôndolas de Centro de Loja',
+      description: 'Diversas medidas'
     },
     {
-      src: gondola2,
-      title: 'Gôndolas Especializadas',
-      description: 'Soluções customizadas para diferentes tipos de produtos.'
+      src: gondolaCenter8,
+      title: 'Gôndolas de Centro de Loja',
+      description: 'Diversas medidas'
+    },
+    {
+      src: gondolaCenter9,
+      title: 'Gôndolas de Centro de Loja',
+      description: 'Diversas medidas'
+    },
+    {
+      src: gondolaCenter10,
+      title: 'Gôndolas de Centro de Loja',
+      description: 'Diversas medidas'
     }
   ],
   2: [ // Estantes
@@ -148,6 +175,21 @@ const GALLERIES = {
       src: expositores04,
       title: 'Expositor Modular',
       description: 'Sistema modular e personalizável para qualquer tipo de produto. Adapta-se ao seu espaço.'
+    },
+    {
+      src: bancoExpo2,
+      title: 'Bancadas Expositoras',
+      description: 'Sob medidas'
+    },
+    {
+      src: bancoExpo3,
+      title: 'Bancadas Expositoras',
+      description: 'Sob medidas'
+    },
+    {
+      src: bancaExpo,
+      title: 'Bancadas Expositoras',
+      description: 'Sob medidas'
     }
   ],
   6: [ // Vitrines
@@ -165,6 +207,43 @@ const GALLERIES = {
       src: vitrines03,
       title: 'Vitrine Expositora Profissional',
       description: 'Vitrine profissional em vidro temperado com acabamento de luxo. Perfeita para joalherias e lojas de marca.'
+    }
+  ],
+  7: [ // Acessórios
+    {
+      src: acessorios01,
+      title: 'Expositor',
+      description: 'Sob várias medidas'
+    },
+    {
+      src: acessorios02,
+      title: 'Bandeja expositora',
+      description: 'Sob medida'
+    },
+    {
+      src: acessorios03,
+      title: 'Display metálico',
+      description: 'Sob medida'
+    },
+    {
+      src: acessorios04,
+      title: 'Ganchos metálicos',
+      description: 'Para painel canaletado'
+    },
+    {
+      src: acessorios05,
+      title: 'Gancho expositor',
+      description: 'Tipo pente para painel canaletado'
+    },
+    {
+      src: acessorios06,
+      title: 'Encaixes',
+      description: 'Através dos retângulos vazados'
+    },
+    {
+      src: acessorios07,
+      title: 'Acessórios metálicos',
+      description: 'Sob medida'
     }
   ]
 }
